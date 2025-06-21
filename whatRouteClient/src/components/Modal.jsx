@@ -11,7 +11,7 @@ const Modal = () => {
 
     try {
       setLoading(true);
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/shortd/${a}/${b}`);
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/shortd/${a}/${b}`);
       const jsonData = await response.json();
       setData(jsonData);
     } catch (error) {
